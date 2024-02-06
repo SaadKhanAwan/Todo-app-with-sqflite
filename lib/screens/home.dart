@@ -1,8 +1,8 @@
 import 'package:first_project/screens/add.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../database/database.dart';
 import '../provider/empprovider.dart';
-import '../widget/database/database.dart';
 import '../widget/employe_model.dart';
 import '../widget/update.dart';
 
@@ -133,100 +133,6 @@ class _homepageState extends State<homepage> {
                   return Text("");
                 });
           })
-          // FutureBuilder(
-          //     //Empolyeprovider is provider consider upper
-          //     //get data is from provider page (EployeeProvider)
-          //     future: Empolyeprovider.getdata(),
-          //     builder: (context, AsyncSnapshot<List<Employee>> snapshort) {
-          //       if (snapshort.hasData) {
-          //         print("empolye data  is ${snapshort.data!.length}");
-          //         // just return problem
-          //         //this comsumer is use for provider to change the vlaues
-          //         return Consumer<EmpolyeeProvider>(
-          //             builder: (context, value, child) {
-          //           return Expanded(
-          //             child: ListView.builder(
-          //                 itemCount: snapshort.data!.length,
-          //                 itemBuilder: (context, index) {
-          //                   return Padding(
-          //                     padding: const EdgeInsets.all(8.0),
-          //                     child: Card(
-          //                       shadowColor: Colors.grey,
-          //                       elevation: 6.0,
-          //                       shape: BeveledRectangleBorder(
-          //                         borderRadius: BorderRadius.circular(10.0),
-          //                       ),
-          //                       child: Row(
-          //                         mainAxisAlignment:
-          //                             MainAxisAlignment.spaceBetween,
-          //                         children: [
-          //                           Column(
-          //                             crossAxisAlignment:
-          //                                 CrossAxisAlignment.start,
-          //                             children: [
-          //                               Text(
-          //                                 snapshort.data![index].name
-          //                                     .toString(),
-          //                                 style: TextStyle(
-          //                                     fontSize: 25,
-          //                                     color: Colors.black,
-          //                                     fontWeight: FontWeight.bold),
-          //                               ),
-          //                               Text(
-          //                                 snapshort.data![index].profetion
-          //                                     .toString(),
-          //                                 style: TextStyle(
-          //                                     fontSize: 20,
-          //                                     color: Colors.black),
-          //                               ),
-          //                               Text(
-          //                                 snapshort.data![index].salary
-          //                                     .toString(),
-          //                                 style: TextStyle(
-          //                                     fontSize: 20,
-          //                                     color: Colors.black),
-          //                               ),
-          //                               SizedBox(
-          //                                 width: 200,
-          //                               )
-          //                             ],
-          //                           ),
-          //                           // edit function
-          //                           InkWell(
-          //                               onTap: () async {
-          //                                 print("working");
-          //                                 var result =
-          //                                     await Navigator.of(context).push(
-          //                                         MaterialPageRoute(
-          //                                             builder: (context) {
-          //                                   return UpdateEmployeeScreen(
-          //                                       emp: snapshort.data![index]);
-          //                                 }));
-
-          //                                 if (result == 'done') {
-          //                                   Empolyeprovider.notifyListeners();
-          //                                 }
-          //                               },
-          //                               child: Icon(Icons.edit)),
-          //                           //delete function
-          //                           InkWell(
-          //                               onTap: () {
-          //                                 print("deleted");
-          //                                 dBhelper!.delete(
-          //                                     snapshort.data![index].id!);
-          //                                 Empolyeprovider.notifyListeners();
-          //                               },
-          //                               child: Icon(Icons.delete))
-          //                         ],
-          //                       ),
-          //                     ),
-          //                   );
-          //                 }),
-          //           );
-          //         });
-          //       }
-          //       return Text("");
-          //     })
         ],
       ),
     );

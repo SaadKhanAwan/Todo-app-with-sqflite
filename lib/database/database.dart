@@ -3,7 +3,7 @@ import 'package:path_provider/path_provider.dart';
 import 'dart:io' as io;
 import 'package:path/path.dart';
 
-import '../employe_model.dart';
+import '../widget/employe_model.dart';
 
 class DB_helper {
   // this is use to write a database

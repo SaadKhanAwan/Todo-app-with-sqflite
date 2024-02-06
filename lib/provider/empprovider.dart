@@ -1,6 +1,6 @@
+import 'package:first_project/database/database.dart';
 import 'package:first_project/widget/employe_model.dart';
 import 'package:flutter/material.dart';
-import '../widget/database/database.dart';
 
 class EmpolyeeProvider with ChangeNotifier {
   DB_helper db = DB_helper();

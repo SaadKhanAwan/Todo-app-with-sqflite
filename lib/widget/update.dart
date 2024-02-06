@@ -1,5 +1,5 @@
-import 'package:first_project/widget/database/database.dart';
 import 'package:flutter/material.dart';
+import '../database/database.dart';
 import 'employe_model.dart';
 
 class UpdateEmployeeScreen extends StatefulWidget {
